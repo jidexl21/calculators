@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+	<title>Loan Calculators</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+	
+	<link rel='stylesheet' type="text/css" href="style.css"/>
+</head>
+<body>
+	<div class="container">
+	<div>
+		<ul class="nav nav-pills nav-fill" role="tablist">
+			<li class="nav-item"><a class="nav-link active" href="#loanCalc" data-toggle="tab" role="tab">Loan</a></li>
+			<li class="nav-item"><a class="nav-link" href="#investmentCalc"  data-toggle="tab" role="tab">Investment</a></li>
+		</ul>
+	</div>
+	<div class="tab-content">
+	<div class="tab-pane active" role="tabpanel" id="loanCalc">
+		<div class="col-md-6">
+				<h2 class="text-center">Loan Calculator</h2>
+				
+				<div class="form-row">
+					<div class="text-muted col col-xs-4">Amount: </div>
+					<div class="col-xs-8">
+					  <input type="number" name="amount" class="form-control" placeholder="amount"/>
+					</div>
+				</div>
+				<div class="form-row">
+					
+					<div class="col">
+					<!--
+					  <input type="range" id="principal" name="principal" value="500000" min="250000" max="6000000" step="50000" />
+					 -->
+					  <input type="range" id="principal" name="principal" value="500000" min="250000" max="6000000" />
+					</div>
+				</div>
+				<div class="form-row">
+						<div class="text-muted col col-xs-4">Select Term: </div>
+						<div class="col-xs-9">
+						  <input type="number" name="duration" class="form-control" placeholder="duration"/>
+						</div>
+					</div>
+				<div class="form-row">
+						<div class="col">
+						  <input type="range" id="tenor" name="tenor" min="1" value="12" max="24" step="1"/>
+						</div>
+					</div>
+				<div class="row">
+					<div class="col">Loan</div>
+					<div class="col text-right"><span id="loanAmt"></span></div>
+				</div>
+				<div class="row">
+					<div class="col">Term (In months)</div>
+					<div class="col text-right"><span id="duration" ></span></div>
+				</div>
+				<div class="row">
+					<div class="col">Monthly repayment</div>
+					<div class="col text-right">&#8358;<span id="repayment"></span></div>
+				</div>
+		</div>
+	</div>
+	
+	<div class="row tab-pane" role="tabpanel" id="investmentCalc">
+		<div class="col-md-6">
+			<h2 class="text-center">Investment Calculator</h2>
+				
+				<div class="form-row">
+					<div class="text-muted col col-xs-4">Amount to Invest: </div>
+					<div class="col-xs-8">
+					  <input type="number" name="iamount" class="form-control" placeholder="amount"/>
+					</div>
+				</div>
+				<div class="form-row">
+					
+					<div class="col">
+					<!--
+					  <input type="range" id="principal" name="principal" value="500000" min="250000" max="6000000" step="50000" />
+					 -->
+					  <input type="range" id="iprincipal" name="iprincipal" value="500000" min="250000" max="30000000" />
+					</div>
+				</div>
+				<div class="form-row">
+						<div class="text-muted col col-xs-4">Duration of investment: </div>
+						<div class="col-xs-9">
+						  <input type="number" name="iduration" class="form-control" placeholder="duration"/>
+						</div>
+					</div>
+				<div class="form-row">
+						<div class="col">
+						  <input type="range" id="itenor" name="itenor" min="3" value="3" max="12" step="1"/>
+						</div>
+					</div>
+				<div class="row">
+					<div class="col">Investment amount</div>
+					<div class="col text-right"><span id="investmentAmt"></span></div>
+				</div>
+				<div class="row">
+					<div class="col">Term (In months)</div>
+					<div class="col text-right"><span id="iduration" ></span></div>
+				</div>
+				<div class="row">
+					<div class="col">Estimated Monthly ROI</div>
+					<div class="col text-right">&#8358;<span id="mroi"></span></div>
+				</div>
+				<div class="row">
+					<div class="col">Estimated Total ROI</div>
+					<div class="col text-right">&#8358;<span id="roi"></span></div>
+				</div>
+		</div>
+	</div>
+	</div><!--/.tab-content -->
+	</div>
+	
+</body>
+<script type="text/javascript" src="jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="countUp.js"></script>
+<script type="text/javascript" src="code.js"></script>
+</html>
